@@ -1,5 +1,50 @@
 const products = [
   {
+    id: "71pZreXGyTL._SL1500",
+    image: "images/products/Gaming-keyBorde.jpg",
+    name: "Kreo Hive Lite Wired RGB Membrane Gaming Keyboard",
+    rating: {
+      stars: 4.0,
+      count: 50
+    },
+    priceCents: 1000,
+    keywords: [
+      "Kreo Hive",
+      "RGB",
+      "Gaming"
+    ]
+  },
+  {
+    id: "ArcticFox-Mouse123",
+    image: "images/products/ArcticFox-Mouse.jpg",
+    name: "ArcticFox-Mouse",
+    rating: {
+      stars: 5.0,
+      count: 100
+    },
+    priceCents: 1200,
+    keywords: [
+      "ArticFox",
+      "mouse",
+      "Gaming"
+    ]
+  },
+  {
+    id: "snorlax-keychain.webp-098",
+    image: "images/products/snorlax-keychain.webp",
+    name: "snorlax-keychain",
+    rating: {
+      stars: 4.0,
+      count: 40
+    },
+    priceCents: 500,
+    keywords: [
+      "key-Shain",
+      "snorlax",
+      "pokmone"
+    ]
+  },
+  {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
     name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
