@@ -1,6 +1,6 @@
 const products = [
   {
-    id: "71pZreXGyTL._SL1500",
+    id: "71pZreXGyTL_SL1500",
     image: "images/products/Gaming-keyBorde.jpg",
     name: "Kreo Hive Lite Wired RGB Membrane Gaming Keyboard",
     rating: {
@@ -30,7 +30,7 @@ const products = [
     ]
   },
   {
-    id: "snorlax-keychain.webp-098",
+    id: "snorlax-keychainwebp-098",
     image: "images/products/snorlax-keychain.webp",
     name: "snorlax-keychain",
     rating: {
