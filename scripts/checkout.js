@@ -3,7 +3,7 @@ import { products } from "../data/products.js";
 import {fromatCurrency} from "./utils/money.js";
 
 
-let cartSummaryHTML;
+let cartSummaryHTML = '';
 
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
@@ -35,7 +35,7 @@ cart.forEach((cartItem) => {
                 </div>
                 <div class="product-quantity">
                   <span>
-                    Quantity: <span class="quantity-label">${matchingProduct.quantity}</span>
+                    Quantity: <span class="quantity-label">${cartItem.quantity}</span>
                   </span>
                   <span class="update-quantity-link link-primary">
                     Update
