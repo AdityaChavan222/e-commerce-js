@@ -59,11 +59,6 @@ class Clothing extends Product {
 
 
 
-
-console.log(tshirt)
-console.log(tshirt.getPrice())
-
-
 export const products = [
   {
     id: "71pZreXGyTL_SL1500",
