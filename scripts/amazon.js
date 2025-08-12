@@ -1,11 +1,14 @@
-import { products } from "../data/products.js";
+import { products, loadProducts } from "../data/products.js";
 import { cart, addToCart, calculateCartQuantity } from "../data/cart.js";
 import { formatCurrency } from "./utils/money.js";
 
-let productsHTML = "";
+loadProducts(renderProductsGrid);
 
-products.forEach((product) => {
-  productsHTML += `
+export function renderProductsGrid() {
+  let productsHTML = "";
+
+  products.forEach((product) => {
+    productsHTML += `
         <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
@@ -58,37 +61,34 @@ products.forEach((product) => {
           </button>
         </div>
     `;
-});
+  });
 
-document.querySelector(".js-products-grid").innerHTML = productsHTML;
-
-
+  document.querySelector(".js-products-grid").innerHTML = productsHTML;
 
   function updateCartQuantity() {
-    
     const cartQuantity = calculateCartQuantity();
 
     document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
+  }
 
- }
+  updateCartQuantity();
 
- updateCartQuantity()
+  document.querySelectorAll(".js-add-to-cart").forEach((button) => {
+    button.addEventListener("click", () => {
+      const { productId } = button.dataset;
 
-document.querySelectorAll(".js-add-to-cart").forEach((button) => {
-  button.addEventListener("click", () => {
-    const { productId } = button.dataset;
+      addToCart(productId);
+      updateCartQuantity();
 
-    addToCart(productId);
-    updateCartQuantity();
+      const addedMessage = document.querySelector(
+        `.js-added-to-cart-${productId}`
+      );
 
-    const addedMessage = document.querySelector(
-      `.js-added-to-cart-${productId}`
-    );
+      addedMessage.classList.add("added-to-cart-visible");
 
-   addedMessage.classList.add('added-to-cart-visible')
-
-   setTimeout(() => {
-    addedMessage.classList.remove('added-to-cart-visible')
-   },1500)
+      setTimeout(() => {
+        addedMessage.classList.remove("added-to-cart-visible");
+      }, 1500);
+    });
   });
-});
+}
